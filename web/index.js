@@ -1,13 +1,17 @@
-var socket = io.connect('');
+var socket = io.connect();
 var files = [], filestag = [];
 
 socket.on('files', function (data) {
 		files = data;
-	});
+});
 
 socket.on('status', function (data) {
 		console.log(data);
-	});
+});
+
+socket.on('time', function (data) {
+		console.log(data);
+});
 
 socket.on('playing', function (i) {
 		console.log("Playing " + filestag[i].artist + ' - ' +filestag[i].title  )
@@ -33,18 +37,10 @@ socket.on('filestag', function (tags) {
 		}
 	});
 
-  socket.on('speaker', function (data) {
-  		console.log(data());
-  	});
 
 
 		$(document).ready(function(){
 				socket.emit('refresh', true);
-				// $('#songtable').on('click', 'tbody tr', function(event) {
-				// 	console.log(this)
-				// 	$(this).addClass('highlight').siblings().removeClass('highlight');
-				// });
-
 
 		    $('.filterable .btn-filter').click(function(){
 		        var $panel = $(this).parents('.filterable'),

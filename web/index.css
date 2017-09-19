@@ -1,5 +1,6 @@
 body {
   padding-top: 52px;
+  background-color: #000;
 }
 
 .filterable {
@@ -27,5 +28,5 @@ body {
 }
 
 .table-hover tbody tr.highlight td {
-    background-color: #ccc;
+    background-color: #000;
 }

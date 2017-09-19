@@ -6,10 +6,11 @@
 
     <title>MP3</title>
 
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://192.168.0.13:8000/socket.io/socket.io.js"></script>
 
 
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap/css/bootstrap-cyborg.min.css" rel="stylesheet">
     <link href="./index.css" rel="stylesheet">
   </head>
 
@@ -19,18 +20,20 @@
      <div class="container">
        <form class="navbar-form navbar-left" role="form">
          <div class="btn-group btn-group-justified" role="group" aria-label="...">
-           <div class="btn-group"><button type="button" class="btn btn-default" onclick="socket.emit('random', true)"><span class="glyphicon glyphicon-sort"></span>Random</button></div>
-           <div class="btn-group"><button type="button" class="btn btn-default" onclick="socket.emit('stop', true)"><span class="glyphicon glyphicon-stop"></span>Stop</button></div>
+           <div class="btn-group"><button type="button" class="btn btn-success" onclick="socket.emit('random', true)"><span class="glyphicon glyphicon-sort"></span>Random</button></div>
+           <div class="btn-group"><button type="button" class="btn btn-danger" onclick="socket.emit('stop', true)"><span class="glyphicon glyphicon-stop"></span>Stop</button></div>
            <div class="btn-group"><button type="button" class="btn btn-default" onclick="socket.emit('stop', true)"><marquee id="playingsong">Not Playing</marquee></button></div>
          </div>
       </form>
+      <!-- <input id="vol-control" type="range" min="0" max="100" step="1" oninput="socket.emit('volume', this.value)" onchange="socket.emit('volume', this.value)" value="100"></input>
+      <input id="seek-control" type="range" min="0" max="100" step="1" oninput="socket.emit('seek', this.value)" onchange="socket.emit('seek', this.value)"value="0"></input> -->
      </div>
    </nav>
 
 
     <div class="container">
       <div class="row">
-        <div class="panel panel-primary filterable">
+        <div class="panel panel-default filterable">
           <div class="panel-heading">
             <h3 class="panel-title">Songs</h3>
               <div class="pull-right">
