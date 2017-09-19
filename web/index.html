@@ -9,7 +9,7 @@
     <script src="http://192.168.0.13:8000/socket.io/socket.io.js"></script>
 
     <link href="./fa/css/font-awesome.css" rel="stylesheet">
-   
+
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="./bootstrap/css/bootstrap-cyborg.min.css" rel="stylesheet">
     <link href="./index.css" rel="stylesheet">
@@ -29,24 +29,23 @@
        </form>
      </div>
     </nav>
- 
 
-<div class="container">
-	<div class="row">
-		<div class="btn-group btn-group-justified" role="group" aria-label="controljob">
-                <div class="btn-group"><button type="button" class="btn btn-ctl btn-default" id="homeBtn" onclick="homeMachine();"><span class="fa-stack fa-1x"><i class="fa fa-home fa-stack-1x"></i><strong class="fa-stack-1x icon-top-text">home</strong><strong class="fa-stack-1x icon-bot-text">laser</strong></span></button></div>
-                        <div class="btn-group"><button type="button" class="btn btn-ctl btn-default" id="playBtn" onclick="playpauseMachine();"><span class="fa-stack fa-1x"><i id="playicon" class="fa fa-play fa-stack-1x"></i><strong class="fa-stack-1x icon-top-text">run</strong><strong class="fa-stack-1x icon-bot-text">gcode</strong></span></button></div>
-                        <div class="btn-group"><button type="button" class="btn btn-ctl btn-default" id="stopBtn" onclick="stopMachine();"><span class="fa-stack fa-1x"><i class="fa fa-stop fa-stack-1x"></i><strong class="fa-stack-1x icon-top-text">abort</strong><strong class="fa-stack-1x icon-bot-text">job</strong></span></button></div>
-                        <div class="btn-group"><button type="button" class="btn btn-ctl btn-default" id="zeroBtn" onclick="sendGcode('G92 X0 Y0 Z0');"><span class="fa-stack fa-1x"><i class="fa fa-bullseye fa-stack-1x"></i><strong class="fa-stack-1x icon-top-text">set</strong><strong class="fa-stack-1x icon-bot-text">zero</strong></span></button></div>
-                      </div>
 
-	</div>
-</div>
 
-   
+
+
+
 
 
     <div class="container">
+      <div class="row">
+    		<div class="btn-group btn-group-justified" role="group" aria-label="controljob">
+          <div class="btn-group"><button type="button" class="btn btn-ctl btn-default"><span class="fa-stack fa-1x"><i class="fa fa-play fa-stack-1x"></i><strong class="fa-stack-1x icon-top-text">play</strong><strong class="fa-stack-1x icon-bot-text">random</strong></span></button></div>
+          <div class="btn-group"><button type="button" class="btn btn-ctl btn-default"><span class="fa-stack fa-1x"><i class="fa fa-pause fa-stack-1x"></i><strong class="fa-stack-1x icon-top-text">pause</strong><strong class="fa-stack-1x icon-bot-text">track</strong></span></button></div>
+          <div class="btn-group"><button type="button" class="btn btn-ctl btn-default"><span class="fa-stack fa-1x"><i class="fa fa-stop fa-stack-1x"></i><strong class="fa-stack-1x icon-top-text">stop</strong><strong class="fa-stack-1x icon-bot-text">track</strong></span></button></div>
+          <div class="btn-group"><button type="button" class="btn btn-ctl btn-default"><span class="fa-stack fa-1x"><i class="fa fa-list-ol fa-stack-1x"></i><strong class="fa-stack-1x icon-top-text">refresh</strong><strong class="fa-stack-1x icon-bot-text">list</strong></span></button></div>
+        </div>
+    	</div>
       <div class="row">
         <div class="panel panel-default filterable">
           <div class="panel-heading">
