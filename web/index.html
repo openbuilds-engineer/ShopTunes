@@ -21,8 +21,8 @@
        <form class="navbar-form navbar-left" role="form">
          <div class="btn-group btn-group-justified" role="group" aria-label="...">
            <div class="btn-group"><button type="button" class="btn btn-success" onclick="socket.emit('random', true)"><span class="glyphicon glyphicon-sort"></span>Random</button></div>
-           <div class="btn-group"><button type="button" class="btn btn-danger" onclick="socket.emit('stop', true)"><span class="glyphicon glyphicon-stop"></span>Stop</button></div>
-           <div class="btn-group"><button type="button" class="btn btn-default" onclick="socket.emit('stop', true)"><marquee id="playingsong">Not Playing</marquee></button></div>
+           <div class="btn-group"><button type="button" class="btn btn-danger" onclick="stop()"><span class="glyphicon glyphicon-stop"></span>Stop</button></div>
+           <div class="btn-group"><button type="button" class="btn btn-default"><marquee id="playingsong">Not Playing</marquee></button></div>
          </div>
       </form>
       <!-- <input id="vol-control" type="range" min="0" max="100" step="1" oninput="socket.emit('volume', this.value)" onchange="socket.emit('volume', this.value)" value="100"></input>

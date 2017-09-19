@@ -1,6 +1,11 @@
 var socket = io.connect();
 var files = [], filestag = [];
 
+function stop() {
+	socket.emit('stop', true)
+	$('#playingsong').html('<span class="glyphicon glyphicon-stop"></span>&nbsp;NOT PLAYING&nbsp;<span class="glyphicon glyphicon-music"></span>')
+}
+
 socket.on('files', function (data) {
 		files = data;
 });
